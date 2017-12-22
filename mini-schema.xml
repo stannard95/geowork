@@ -58,7 +58,7 @@
 		</device>
 		<device>
 			<name>smartplug</name>
-			<value>67</value>
+			<value>hello</value>
 			<notes>Legacy Legato smartplug</notes>
 		</device>
 		<device>

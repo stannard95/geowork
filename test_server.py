@@ -13,7 +13,10 @@ def runTest():
 
 
 def test_return(x):
-	if(isinstance(x, int) == True):
-		return "valid"
-	else:
-		return "invalid"
+	try:
+  		int(x)
+  		print ("==> Is an int")
+  		return True
+	except ValueError:
+		print ("==> Not a int")
+		return False
