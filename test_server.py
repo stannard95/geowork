@@ -1,22 +1,26 @@
 import socket;
 import unittest;
+import colorama
+from colorama import Fore, Back, Style
 
-def runTest():
+colorama.init()
+
+def portTest():
 	sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	result = sock.connect_ex(('localhost', 5000))
 
-	print("==> RUNNING WEBSERVER TEST")
+	print(Fore.GREEN + "==> 	RUNNING WEBSERVER TEST" + Style.RESET_ALL)
+
 	if (result == 0):
-	   print ("==> Port is open\n")
+	   print (Fore.GREEN + "==> 	Port is open\n" + Style.RESET_ALL)
 	else:
-	   print ("==> Port is not open\n")
+	   print ("==> 	Port is not open\n" + Style.RESET_ALL)
 
 
-def test_return(x):
+def deviceValueTest(x):
 	try:
   		int(x)
-  		print ("==> Is an int")
   		return True
 	except ValueError:
-		print ("==> Not a int")
+		print (Fore.GREEN + "==> 	"+ x + " Not a int" + Style.RESET_ALL)
 		return False
